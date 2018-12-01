@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>跳跳侠小游戏</title>
+    <link rel="icon" href="assets/simgledude.png" type="image/x-icon"/>
+    <script type="text/javascript" src="../phaser.min.js"></script>
+    <style>
+        body{margin: 0;padding: 0;}
+        canvas{
+            margin: 0 auto;
+        }
+        .shareimage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 2;
+        }
+        .shareimage img {
+            position: absolute;
+        }
+        .shareimage .sharepng {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div style="position: absolute;display: block;"><a href="../index.html"><img src="assets/Button_Exit.png"></a></div>
+<div class="bdsharebuttonbox" id="bdsharebutton" style="display: none;">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<div id="share_image" class="shareimage">
+    <img class="sharepng" src="assets/share-image.png" alt="" />
+    <img class="closebtn" src="assets/close.png" alt="" onclick="onCloseShare();" />
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/share.js"></script>
+</body>
+</html>
